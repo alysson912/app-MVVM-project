@@ -19,6 +19,7 @@
 		38F18DD129CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD029CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift */; };
 		38F18DD429CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD329CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift */; };
 		38F18DD729CA60EC00ADCB7F /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD629CA60EC00ADCB7F /* StoryCardViewModel.swift */; };
+		38F18DDA29CA627500ADCB7F /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD929CA627500ADCB7F /* Stories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		38F18DD029CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		38F18DD329CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		38F18DD629CA60EC00ADCB7F /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
+		38F18DD929CA627500ADCB7F /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				38F18DC329CA200300ADCB7F /* Utils */,
+				38F18DD829CA625D00ADCB7F /* Model */,
 				38F18DC629CA219D00ADCB7F /* Home */,
 			);
 			path = src;
@@ -165,6 +168,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		38F18DD829CA625D00ADCB7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38F18DD929CA627500ADCB7F /* Stories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +251,7 @@
 				38F18DD129CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift in Sources */,
 				38F18DCC29CA272000ADCB7F /* HomeViewModel.swift in Sources */,
 				38F18DD729CA60EC00ADCB7F /* StoryCardViewModel.swift in Sources */,
+				38F18DDA29CA627500ADCB7F /* Stories.swift in Sources */,
 				3893C9EB29CA162C00F08EFA /* AppDelegate.swift in Sources */,
 				38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */,
 				38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */,
