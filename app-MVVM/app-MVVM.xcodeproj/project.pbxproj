@@ -17,6 +17,8 @@
 		38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */; };
 		38F18DCC29CA272000ADCB7F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DCB29CA272000ADCB7F /* HomeViewModel.swift */; };
 		38F18DD129CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD029CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift */; };
+		38F18DD429CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD329CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift */; };
+		38F18DD729CA60EC00ADCB7F /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DD629CA60EC00ADCB7F /* StoryCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		38F18DCB29CA272000ADCB7F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		38F18DD029CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		38F18DD329CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		38F18DD629CA60EC00ADCB7F /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +142,27 @@
 		38F18DCF29CA56A300ADCB7F /* StoryCardCollectionVIewCell */ = {
 			isa = PBXGroup;
 			children = (
+				38F18DD529CA60D200ADCB7F /* ViewModel */,
+				38F18DD229CA574100ADCB7F /* Screen */,
 				38F18DD029CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift */,
 			);
 			path = StoryCardCollectionVIewCell;
+			sourceTree = "<group>";
+		};
+		38F18DD229CA574100ADCB7F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				38F18DD329CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		38F18DD529CA60D200ADCB7F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38F18DD629CA60EC00ADCB7F /* StoryCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +239,12 @@
 				3893C9EF29CA162C00F08EFA /* HomeVC.swift in Sources */,
 				38F18DD129CA56CF00ADCB7F /* StoryCardCollectionViewCell.swift in Sources */,
 				38F18DCC29CA272000ADCB7F /* HomeViewModel.swift in Sources */,
+				38F18DD729CA60EC00ADCB7F /* StoryCardViewModel.swift in Sources */,
 				3893C9EB29CA162C00F08EFA /* AppDelegate.swift in Sources */,
 				38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */,
 				38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */,
 				3893C9ED29CA162C00F08EFA /* SceneDelegate.swift in Sources */,
+				38F18DD429CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

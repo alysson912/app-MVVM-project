@@ -19,6 +19,7 @@ class HomeScreen: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = false
         // to do: register
+        cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
         cv.backgroundColor = .clear
         
         return cv
