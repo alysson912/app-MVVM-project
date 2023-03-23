@@ -15,7 +15,7 @@ class StoryCollectionViewCellScreen: UIView {
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFit
         img.clipsToBounds = true
-        img.layer.cornerRadius = 35
+        img.layer.cornerRadius = 45
         return img
     }()
     

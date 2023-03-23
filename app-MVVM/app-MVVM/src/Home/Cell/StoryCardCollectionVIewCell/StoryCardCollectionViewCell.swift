@@ -42,8 +42,12 @@ extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        guard let viewModel = viewModel else {return UICollectionViewCell()}
         
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath)as? StoryCollectionViewCell
+        cell?.setupCell(data: viewModel.loudCurrentStory(indexPath: indexPath), indexPath: indexPath) 
+        
+        return cell ?? UICollectionViewCell()
         
     }
     
