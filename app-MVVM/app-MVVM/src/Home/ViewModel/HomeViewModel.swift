@@ -35,7 +35,7 @@ class HomeViewModel {
     }
     
     public var numberOfItemsInSection: Int {
-        return  1
+        return  2
     }
     public func sizeForItemAt(indexPath: IndexPath, frame: CGRect) -> CGSize {
         if indexPath.row == 0 {
