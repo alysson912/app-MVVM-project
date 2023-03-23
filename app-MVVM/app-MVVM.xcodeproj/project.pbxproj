@@ -24,6 +24,8 @@
 		38F18DE029CA740300ADCB7F /* StoryCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DDF29CA740300ADCB7F /* StoryCollectionViewCellScreen.swift */; };
 		38F18DE529CCB26800ADCB7F /* PostCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DE429CCB26800ADCB7F /* PostCardCollectionViewCell.swift */; };
 		38F18DE829CCB2A800ADCB7F /* PostCardCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DE729CCB2A800ADCB7F /* PostCardCollectionViewCellScreen.swift */; };
+		38F18DEA29CCBDAC00ADCB7F /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DE929CCBDAC00ADCB7F /* Posts.swift */; };
+		38F18DED29CCBFDB00ADCB7F /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DEC29CCBFDB00ADCB7F /* PostCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		38F18DDF29CA740300ADCB7F /* StoryCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		38F18DE429CCB26800ADCB7F /* PostCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		38F18DE729CCB2A800ADCB7F /* PostCardCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		38F18DE929CCBDAC00ADCB7F /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		38F18DEC29CCBFDB00ADCB7F /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				38F18DD929CA627500ADCB7F /* Stories.swift */,
+				38F18DE929CCBDAC00ADCB7F /* Posts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 		38F18DE329CCB23200ADCB7F /* PostCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				38F18DEB29CCBFAA00ADCB7F /* ViewModel */,
 				38F18DE629CCB29500ADCB7F /* Screen */,
 				38F18DE429CCB26800ADCB7F /* PostCardCollectionViewCell.swift */,
 			);
@@ -234,6 +240,14 @@
 				38F18DE729CCB2A800ADCB7F /* PostCardCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		38F18DEB29CCBFAA00ADCB7F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38F18DEC29CCBFDB00ADCB7F /* PostCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +328,7 @@
 				38F18DCC29CA272000ADCB7F /* HomeViewModel.swift in Sources */,
 				38F18DDD29CA738D00ADCB7F /* StoryCollectionViewCell.swift in Sources */,
 				38F18DD729CA60EC00ADCB7F /* StoryCardViewModel.swift in Sources */,
+				38F18DED29CCBFDB00ADCB7F /* PostCardViewModel.swift in Sources */,
 				38F18DE829CCB2A800ADCB7F /* PostCardCollectionViewCellScreen.swift in Sources */,
 				38F18DDA29CA627500ADCB7F /* Stories.swift in Sources */,
 				3893C9EB29CA162C00F08EFA /* AppDelegate.swift in Sources */,
@@ -321,6 +336,7 @@
 				38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */,
 				3893C9ED29CA162C00F08EFA /* SceneDelegate.swift in Sources */,
 				38F18DD429CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift in Sources */,
+				38F18DEA29CCBDAC00ADCB7F /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
