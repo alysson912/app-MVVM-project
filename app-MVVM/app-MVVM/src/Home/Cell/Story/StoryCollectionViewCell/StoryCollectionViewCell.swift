@@ -12,13 +12,10 @@ class StoryCollectionViewCell: UICollectionViewCell {
     static let identifier: String = "StoryCollectionViewCell"
     
     private var screen: StoryCollectionViewCellScreen = StoryCollectionViewCellScreen()
-
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
-     
     }
     
     required init?(coder: NSCoder) {

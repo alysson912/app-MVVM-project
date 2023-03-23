@@ -13,9 +13,9 @@ class StoryCollectionViewCellScreen: UIView {
     lazy var profileImageView: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.contentMode = .scaleAspectFit
+        img.contentMode = .scaleAspectFill
         img.clipsToBounds = true
-        img.layer.cornerRadius = 45
+        img.layer.cornerRadius = 35
         return img
     }()
     

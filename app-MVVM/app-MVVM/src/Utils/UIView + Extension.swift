@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+extension UIView { // tudo que herda de UIView, temos sombras do card e constraints = 0 
     
     
     func setCardShadow(){

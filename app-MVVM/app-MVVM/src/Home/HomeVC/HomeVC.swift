@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
     private var homeScreen: HomeScreen?
     private var viewModel: HomeViewModel = HomeViewModel()
     
@@ -21,8 +21,8 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
-
-
+    
+    
 }
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
