@@ -13,6 +13,10 @@ class HomeViewModel {
         Posts(profileImage: "img2", userName: "jack", postImage: "post1"),
         Posts(profileImage: "img4", userName: "samuel", postImage: "post2"),
         Posts(profileImage: "img3", userName: "carolina", postImage: "post3"),
+        Posts(profileImage: "img6", userName: "puggy_101", postImage: "post4"),
+        Posts(profileImage: "img2", userName: "jack", postImage: "post1"),
+        Posts(profileImage: "img4", userName: "samuel", postImage: "post2"),
+        Posts(profileImage: "img3", userName: "carolina", postImage: "post3"),
         Posts(profileImage: "img6", userName: "puggy_101", postImage: "post4")
     ]
     
@@ -21,6 +25,13 @@ class HomeViewModel {
     }
     
     private var story = [
+        Stories(image: "img1", userName: "Add Story"),
+        Stories(image: "img2", userName: "jack"),
+        Stories(image: "img3", userName: "carolina"),
+        Stories(image: "img4", userName: "samuel"),
+        Stories(image: "img5", userName: "ariana josep"),
+        Stories(image: "img6", userName: "puggy_101"),
+        Stories(image: "img7", userName: "dheeraj_ks"),
         Stories(image: "img1", userName: "Add Story"),
         Stories(image: "img2", userName: "jack"),
         Stories(image: "img3", userName: "carolina"),

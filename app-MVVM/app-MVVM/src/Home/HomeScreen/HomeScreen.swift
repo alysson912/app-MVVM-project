@@ -17,6 +17,7 @@ class HomeScreen: UIView {
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.isScrollEnabled = false
         cv.showsHorizontalScrollIndicator = false
         // to do: register
         cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)

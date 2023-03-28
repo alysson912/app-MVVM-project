@@ -54,4 +54,7 @@ extension PostCardCollectionViewCell: UICollectionViewDelegate, UICollectionView
         return CGSize(width: collectionView.frame.width, height: 450)
     }
     
+    
+    
+    
 }

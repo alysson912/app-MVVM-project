@@ -15,7 +15,7 @@ class StoryCollectionViewCellScreen: UIView {
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFill
         img.clipsToBounds = true
-        img.layer.cornerRadius = 35
+        img.layer.cornerRadius = 32
         return img
     }()
     
@@ -50,8 +50,8 @@ class StoryCollectionViewCellScreen: UIView {
     
     private func configConstraints(){
         NSLayoutConstraint.activate([
-            profileImageView.widthAnchor.constraint(equalToConstant: 70),
-            profileImageView.heightAnchor.constraint(equalToConstant: 70),
+            profileImageView.widthAnchor.constraint(equalToConstant: 60),
+            profileImageView.heightAnchor.constraint(equalToConstant: 60),
             profileImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             profileImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant:  15),
@@ -62,7 +62,7 @@ class StoryCollectionViewCellScreen: UIView {
             addButton.bottomAnchor.constraint(equalTo: profileImageView.topAnchor),
             addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             
-            userNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10),
+            userNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 5),
             userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             

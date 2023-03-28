@@ -51,7 +51,7 @@ class StoryCardCollectionViewCellScreen: UIView {
     }
     private func configConstraints(){
         NSLayoutConstraint.activate([
-            cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            cardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             cardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
             cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15),
