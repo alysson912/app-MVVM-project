@@ -6,80 +6,69 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class LoginVC: UIViewController {
-
-    var loginScreen: LoginScreen?
-    var auth  : Auth?
-
+    
+    
+    private var loginScreen: LoginScreen?
+    private var viewModel: LoginViewModel? = LoginViewModel()
+    
+    
     
     
     override func loadView() {
-        self.loginScreen = LoginScreen()
-        self.view = self.loginScreen
+        loginScreen = LoginScreen()
+        view = loginScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginScreen?.delegate( delegate:  self)
-        self.loginScreen?.configTextFieldDelegate(delegate: self)
-        self.auth = Auth.auth()
-      
+        loginScreen?.delegate( delegate:  self)
+        loginScreen?.configTextFieldDelegate(delegate: self)
+        viewModel?.delegate(delegate: self)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-
 }
 extension LoginVC: LoginScreenProtocol{
-    func actionLoginButton() {
-        
-        let homeVC = HomeVC()
-        self.navigationController?.pushViewController(homeVC, animated: true )
-        
-//        guard let login = self.loginScreen else { return }
-//
-//        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { usuario, error in
-//
-//            if error != nil{
-//                self.alert?.getAlert(titulo: "Atenção", mensagem: "Login ou senha inválido !")
-//
-//            }else {
-//                if usuario == nil  {
-//                    self.alert?.getAlert(titulo: "Atenção", mensagem: "Usuário inválido")
-//                }else {
-//                    self.alert?.getAlert(titulo: "Atenção", mensagem: "Login efetuado com Sucesso!")
-//                }
-//            }
-//        })
-        
+    func tappedLoginButton() {
+        viewModel?.login(email: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "")
     }
     
-    func actionRegisterButton() {
-        let vc = HomeVC()
-        self.navigationController?.pushViewController(vc, animated: true )
-        
+    func tappedRegisterButton() {
+        // let vc = HomeVC()
+        //  self.navigationController?.pushViewController(vc, animated: true )
+    }
+}
+
+extension LoginVC: loginViewModelProtocol {
+    func successLogin() {
+        let vc: HomeVC = HomeVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    func errorLogin(errorMessage: String) {
+        print(#function)
     }
 }
 
 // return keyboard
 extension LoginVC: UITextFieldDelegate{
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-     
-        
-    }
-
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.loginScreen?.validarTextFields()
+        let email: String = loginScreen?.emailTextField.text ?? ""
+        let password: String = loginScreen?.passwordTextField.text ?? ""
+       
+        if !email.isEmpty && !password.isEmpty {
+            print("Botao habilitado")
+            loginScreen?.loginButton.isEnabled = true
+            loginScreen?.loginButton.backgroundColor = .darkGray
+        } else {
+            print("Botao desabilitado")
+            loginScreen?.loginButton.isEnabled = false
+            loginScreen?.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+        }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //print( "textFieldShouldReturn")
         textField.resignFirstResponder()
-        
         return true
     }
 }

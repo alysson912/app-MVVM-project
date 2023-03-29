@@ -8,8 +8,8 @@
 import UIKit
 
 protocol LoginScreenProtocol: class{
-    func actionLoginButton()
-    func actionRegisterButton()
+    func tappedLoginButton()
+    func tappedRegisterButton()
 }
 
 class LoginScreen: UIView {
@@ -43,24 +43,30 @@ private weak var delegate : LoginScreenProtocol?
         email.translatesAutoresizingMaskIntoConstraints = false
         email.autocorrectionType = .no
         email.placeholder = "digite seu e-mail"
+        email.text = "alysson@gmail.com"
         email.textColor = .darkGray
         email.backgroundColor = .white
         email.borderStyle = .roundedRect
         email.keyboardType = .emailAddress
+        email.clipsToBounds = true
+        email.layer.cornerRadius = 10
       
         return email
     }()
     
-    lazy var loginPasswordTextField : UITextField = {
+    lazy var passwordTextField : UITextField = {
        let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.autocorrectionType = .no
         password.placeholder = "digite sua senha"
+        password.text = "12345a"
         password.textColor = .darkGray
         password.backgroundColor = .white
         password.borderStyle = .roundedRect
         password.keyboardType = .emailAddress
-       // password.isSecureTextEntry = true
+        password.isSecureTextEntry = true
+        password.clipsToBounds = true
+        password.layer.cornerRadius = 10
       
         return password
     }()
@@ -95,10 +101,8 @@ private weak var delegate : LoginScreenProtocol?
         //------------------------------
       
         self.setUpConstraints()// constraints nativo
-       
     }
-     
-    
+
     private func configBackground(){
         self.backgroundColor = .white
     }
@@ -108,7 +112,7 @@ private weak var delegate : LoginScreenProtocol?
         self.addSubview(self.loginLabel)
         self.addSubview(self.logoAppImageView)
         self.addSubview(self.emailTextField)
-        self.addSubview(self.loginPasswordTextField)
+        self.addSubview(self.passwordTextField)
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
         
@@ -116,44 +120,24 @@ private weak var delegate : LoginScreenProtocol?
     
     func configTextFieldDelegate( delegate: UITextFieldDelegate){
         self.emailTextField.delegate = delegate
-        self.loginPasswordTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
     }
     
     @objc private func tappedLoginButton(){
-        self.delegate?.actionLoginButton()
+        self.delegate?.tappedLoginButton()
     }
     
     @objc private func tappedRegisterButton(){
-        self.delegate?.actionRegisterButton()
+        self.delegate?.tappedRegisterButton()
     }
     
-    public func validarTextFields(){
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.loginPasswordTextField.text ?? ""
-        
-        if !email.isEmpty && !password.isEmpty{
-            self.configButtonEnable(true)
-        }else{
-            self.configButtonEnable(false)
-        }
-    }
-    
-    private func configButtonEnable(_ enable : Bool ){
-        if enable{
-            self.loginButton.setTitleColor(.white, for: .normal)
-            self.loginButton.isEnabled = true
-        }else {
-            self.loginButton.setTitleColor(.lightGray, for: .normal)
-            self.loginButton.isEnabled = false
-        }
-    }
     
     public func getEmail() -> String{
         return self.emailTextField.text ?? ""
     }
     
     public func getPassword() -> String{
-        return self.loginPasswordTextField.text ?? ""
+        return self.passwordTextField.text ?? ""
     }
     
     
@@ -170,23 +154,24 @@ private weak var delegate : LoginScreenProtocol?
             logoAppImageView.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 40),
             logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            logoAppImageView.heightAnchor.constraint(equalToConstant: 300),
+            logoAppImageView.heightAnchor.constraint(equalToConstant: 150),
+            logoAppImageView.widthAnchor.constraint(equalToConstant: 150),
             
             emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 20),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             emailTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            loginPasswordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
-            loginPasswordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
-            loginPasswordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
-            loginPasswordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
+            passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 15),
+            passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: self.emailTextField.heightAnchor),
             
             
-            loginButton.topAnchor.constraint(equalTo: self.loginPasswordTextField.bottomAnchor, constant: 15 ),
-            loginButton.leadingAnchor.constraint(equalTo: self.loginPasswordTextField.leadingAnchor),
-            loginButton.trailingAnchor.constraint(equalTo: self.loginPasswordTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalTo: self.loginPasswordTextField.heightAnchor),
+            loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 15 ),
+            loginButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: self.passwordTextField.heightAnchor),
             
             registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor,constant: 15),
             registerButton.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
@@ -195,12 +180,4 @@ private weak var delegate : LoginScreenProtocol?
             
         ])
     }
-     
-     
-    
-    
-    
-    
-    
-    
 }
