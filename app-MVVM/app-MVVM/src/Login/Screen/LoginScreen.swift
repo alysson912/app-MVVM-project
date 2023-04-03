@@ -14,7 +14,7 @@ protocol LoginScreenProtocol: class{
 
 class LoginScreen: UIView {
     
-private weak var delegate : LoginScreenProtocol?
+    private weak var delegate : LoginScreenProtocol?
     
     func delegate(delegate : LoginScreenProtocol?){
         self.delegate = delegate
@@ -39,7 +39,7 @@ private weak var delegate : LoginScreenProtocol?
     }()
     
     lazy var emailTextField : UITextField = {
-       let email = UITextField()
+        let email = UITextField()
         email.translatesAutoresizingMaskIntoConstraints = false
         email.autocorrectionType = .no
         email.placeholder = "digite seu e-mail"
@@ -50,12 +50,11 @@ private weak var delegate : LoginScreenProtocol?
         email.keyboardType = .emailAddress
         email.clipsToBounds = true
         email.layer.cornerRadius = 10
-      
         return email
     }()
     
     lazy var passwordTextField : UITextField = {
-       let password = UITextField()
+        let password = UITextField()
         password.translatesAutoresizingMaskIntoConstraints = false
         password.autocorrectionType = .no
         password.placeholder = "digite sua senha"
@@ -67,12 +66,11 @@ private weak var delegate : LoginScreenProtocol?
         password.isSecureTextEntry = true
         password.clipsToBounds = true
         password.layer.cornerRadius = 10
-      
         return password
     }()
     
     lazy var loginButton : UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("entrar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -85,7 +83,7 @@ private weak var delegate : LoginScreenProtocol?
     }()
     
     lazy var registerButton : UIButton = {
-       let register = UIButton()
+        let register = UIButton()
         register.translatesAutoresizingMaskIntoConstraints = false
         register.setTitle("cadastre-se", for: .normal)
         register.titleLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -99,14 +97,13 @@ private weak var delegate : LoginScreenProtocol?
         self.configBackground() // cor de fundo
         self.configSuperView() // elementos add
         //------------------------------
-      
+        
         self.setUpConstraints()// constraints nativo
     }
-
+    
     private func configBackground(){
         self.backgroundColor = .white
     }
-    
     
     private func configSuperView(){
         self.addSubview(self.loginLabel)
@@ -115,7 +112,6 @@ private weak var delegate : LoginScreenProtocol?
         self.addSubview(self.passwordTextField)
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
-        
     }
     
     func configTextFieldDelegate( delegate: UITextFieldDelegate){
@@ -145,8 +141,8 @@ private weak var delegate : LoginScreenProtocol?
         fatalError("init(coder:) has not been implemented")
     }
     
-
-   private func setUpConstraints() {
+    
+    private func setUpConstraints() {
         NSLayoutConstraint.activate([
             loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 60),
             loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),

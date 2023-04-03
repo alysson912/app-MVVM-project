@@ -9,12 +9,8 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-    
     private var loginScreen: LoginScreen?
     private var viewModel: LoginViewModel? = LoginViewModel()
-    
-    
-    
     
     override func loadView() {
         loginScreen = LoginScreen()
@@ -34,19 +30,20 @@ extension LoginVC: LoginScreenProtocol{
     }
     
     func tappedRegisterButton() {
-        // let vc = HomeVC()
-        //  self.navigationController?.pushViewController(vc, animated: true )
+        let vc: RegisterVC = RegisterVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }
 
-extension LoginVC: loginViewModelProtocol {
+extension LoginVC: LoginViewModelProtocol {
     func successLogin() {
         let vc: HomeVC = HomeVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     func errorLogin(errorMessage: String) {
-        print(#function)
+        Alert(controller: self).showAlertInformation(title: "Atenção!", message: errorMessage)
     }
 }
 
@@ -56,7 +53,7 @@ extension LoginVC: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         let email: String = loginScreen?.emailTextField.text ?? ""
         let password: String = loginScreen?.passwordTextField.text ?? ""
-       
+        
         if !email.isEmpty && !password.isEmpty {
             print("Botao habilitado")
             loginScreen?.loginButton.isEnabled = true

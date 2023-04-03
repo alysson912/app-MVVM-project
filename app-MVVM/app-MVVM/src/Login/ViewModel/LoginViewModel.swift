@@ -8,16 +8,16 @@
 import UIKit
 import FirebaseAuth
 
-protocol loginViewModelProtocol: AnyObject {
+ protocol LoginViewModelProtocol: AnyObject {
     func successLogin()
     func errorLogin( errorMessage: String)
 }
 class LoginViewModel {
     
-    private weak var delegate: loginViewModelProtocol?
+    private weak var delegate: LoginViewModelProtocol?
     private var auth = Auth.auth()
     
-    public func delegate( delegate: loginViewModelProtocol?){
+    public func delegate(delegate: LoginViewModelProtocol?){
         self.delegate = delegate
     }
     

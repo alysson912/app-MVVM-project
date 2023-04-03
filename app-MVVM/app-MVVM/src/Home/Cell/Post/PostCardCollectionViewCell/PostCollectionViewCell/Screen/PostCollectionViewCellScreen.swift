@@ -49,7 +49,7 @@ class PostCollectionViewCellScreen: UIView {
         img.contentMode = .scaleAspectFill
         img.image = UIImage(named: "demo")
         img.clipsToBounds = true
-        img.layer.cornerRadius = 35
+        img.layer.cornerRadius = 25
         return img
     }()
     
@@ -131,12 +131,12 @@ class PostCollectionViewCellScreen: UIView {
             likeImageView.heightAnchor.constraint(equalToConstant: 25),
             likeImageView.widthAnchor.constraint(equalToConstant: 25),
             
-            profileImageView.heightAnchor.constraint(equalToConstant: 30),
-            profileImageView.widthAnchor.constraint(equalToConstant: 30),
+            profileImageView.heightAnchor.constraint(equalToConstant: 45),
+            profileImageView.widthAnchor.constraint(equalToConstant: 45),
             profileImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 17),
             profileImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 20),
             
-            userNameLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 24),
+            userNameLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 30),
             userNameLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
             userNameLabel.trailingAnchor.constraint(equalTo: likeImageView.leadingAnchor, constant: -5),
             
