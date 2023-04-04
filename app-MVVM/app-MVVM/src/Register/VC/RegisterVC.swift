@@ -9,51 +9,61 @@ import UIKit
 import FirebaseAuth
 
 class RegisterVC: UIViewController {
-
-    var registerScreen: RegisterScreen?
-    var auth : Auth?
-    //var alert : Alert?
+    
+    private var registerScreen: RegisterScreen?
+    private var viewModel: RegisterViewModel = RegisterViewModel()
     
     
     override func loadView() {
-        self.registerScreen = RegisterScreen()
-        self.view = self.registerScreen
+        registerScreen = RegisterScreen()
+        view = registerScreen
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { // hide navigation controller 
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerScreen?.configTextFieldDelegate(delegate: self)
-        self.registerScreen?.delegate(delegate: self)
-        self.auth = Auth.auth()
-      //  self.alert = Alert(controller: self)
+        registerScreen?.configTextFieldDelegate(delegate: self)
+        registerScreen?.delegate(delegate: self)
+        viewModel.delegate(delegate: self)
     }
 }
-     extension RegisterVC: UITextFieldDelegate {
-         
-         func textFieldDidEndEditing(_ textField: UITextField) {
-             self.registerScreen?.validarTextFields()
-         }
-         
-         func textFieldShouldReturn(_ texField: UITextField) -> Bool {
+extension RegisterVC: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.registerScreen?.validarTextFields()
+    }
+    
+    func textFieldShouldReturn(_ texField: UITextField) -> Bool {
         texField.resignFirstResponder()
-             
-         return true
+        return true
     }
 }
 
 extension RegisterVC: RegisterScreenProtocol {
     func actionBackButton() {
-        
-        let VC = LoginVC()
-        let navVC = UINavigationController(rootViewController: VC)
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true, completion: nil)
+
+      //  navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popViewController(animated: true)
+       // navVC.modalPresentationStyle = .fullScreen
+      //  self.present(navVC, animated: true, completion: nil)
     }
     
     func actionRegisterButton() {
-
+        viewModel.registerUser(email: registerScreen?.emailTextField.text ?? "", password: registerScreen?.passwordTextField.text ?? "")
     }
-    
-    
 }
 
+extension RegisterVC: RegisterViewModelProtocol {
+    func successRegister() {
+        let VC = HomeVC()
+        VC.modalPresentationStyle = .fullScreen
+        self.present(VC, animated: true, completion: nil)
+    }
+    
+    func errorRegister(errorMessage: String) {
+        Alert(controller: self).showAlertInformation(title: "Error ao Registrar", message: errorMessage)
+    }
+}

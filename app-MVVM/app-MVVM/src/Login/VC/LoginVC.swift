@@ -17,6 +17,10 @@ class LoginVC: UIViewController {
         view = loginScreen
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginScreen?.delegate( delegate:  self)
@@ -30,9 +34,10 @@ extension LoginVC: LoginScreenProtocol{
     }
     
     func tappedRegisterButton() {
-        let vc: RegisterVC = RegisterVC()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        let vc = RegisterVC()
+       // vc.modalPresentationStyle = .fullScreen 
+      //  present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -55,11 +60,9 @@ extension LoginVC: UITextFieldDelegate{
         let password: String = loginScreen?.passwordTextField.text ?? ""
         
         if !email.isEmpty && !password.isEmpty {
-            print("Botao habilitado")
             loginScreen?.loginButton.isEnabled = true
             loginScreen?.loginButton.backgroundColor = .darkGray
         } else {
-            print("Botao desabilitado")
             loginScreen?.loginButton.isEnabled = false
             loginScreen?.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
         }

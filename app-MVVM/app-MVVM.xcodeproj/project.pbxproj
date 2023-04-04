@@ -22,6 +22,7 @@
 		38C5B9E529D6086300F05E72 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5B9E329D6086200F05E72 /* UITextField+Extension.swift */; };
 		38C5B9E629D6086300F05E72 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5B9E429D6086300F05E72 /* UIViewController+Extension.swift */; };
 		38C5B9E829D6093C00F05E72 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5B9E729D6093C00F05E72 /* Extension+Button.swift */; };
+		38E5341629DB45AB00543A6C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5341529DB45AB00543A6C /* RegisterViewModel.swift */; };
 		38F18DC229CA1D1C00ADCB7F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC129CA1D1C00ADCB7F /* HomeScreen.swift */; };
 		38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC429CA202700ADCB7F /* UIView + Extension.swift */; };
 		38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */; };
@@ -60,6 +61,7 @@
 		38C5B9E329D6086200F05E72 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		38C5B9E429D6086300F05E72 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38C5B9E729D6093C00F05E72 /* Extension+Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		38E5341529DB45AB00543A6C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		38F18DC129CA1D1C00ADCB7F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		38F18DC429CA202700ADCB7F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		38C5B9DC29D5F78F00F05E72 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				38E5341429DB458400543A6C /* RegisterViewModel */,
 				38C5B9DD29D5F78F00F05E72 /* VC */,
 				38C5B9DF29D5F78F00F05E72 /* Screen */,
 			);
@@ -211,6 +214,14 @@
 				38C5B9E029D5F78F00F05E72 /* RegisterScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		38E5341429DB458400543A6C /* RegisterViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38E5341529DB45AB00543A6C /* RegisterViewModel.swift */,
+			);
+			path = RegisterViewModel;
 			sourceTree = "<group>";
 		};
 		38F18DC329CA200300ADCB7F /* Utils */ = {
@@ -531,6 +542,7 @@
 				38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */,
 				38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */,
 				3893C9ED29CA162C00F08EFA /* SceneDelegate.swift in Sources */,
+				38E5341629DB45AB00543A6C /* RegisterViewModel.swift in Sources */,
 				38F18DD429CA576D00ADCB7F /* StoryCardCollectionViewCellScreen.swift in Sources */,
 				38F18DEA29CCBDAC00ADCB7F /* Posts.swift in Sources */,
 			);

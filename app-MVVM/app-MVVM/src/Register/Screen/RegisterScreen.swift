@@ -47,7 +47,6 @@ class RegisterScreen: UIView {
         email.placeholder = "digite seu e-mail:"
         email.font = UIFont.systemFont( ofSize: 14)
         email.textColor = .darkGray
-        
         return email
     }()
     
@@ -57,12 +56,9 @@ class RegisterScreen: UIView {
         password.autocorrectionType = .no
         password.backgroundColor = .white
         password.borderStyle = .roundedRect
-        //password.keyboardType = .default
-        //password.isSecureTextEntry = true
         password.placeholder = "digite sua senha:"
         password.font = UIFont.systemFont( ofSize: 14)
         password.textColor = .darkGray
-        
         return password
     }()
     
@@ -75,20 +71,14 @@ class RegisterScreen: UIView {
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor( red: 102/255, green: 103/255, blue: 171/255, alpha: 1.0)
         button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
-        
         return button
     }()
-    
     
     override init( frame : CGRect){
         super.init(frame: frame)
         self.configBackGround()
         self.configSuperView()
-        
-        
-        
         self.configButtonEnable(false )
-        
     }
     
     private func configSuperView(){
@@ -103,7 +93,6 @@ class RegisterScreen: UIView {
     private func configBackGround(){
         self.backgroundColor = .white
     }
-    
     
     public func configTextFieldDelegate( delegate:UITextFieldDelegate ){
         self.emailTextField.delegate = delegate
