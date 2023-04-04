@@ -12,7 +12,7 @@ class RegisterVC: UIViewController {
     
     private var registerScreen: RegisterScreen?
     private var viewModel: RegisterViewModel = RegisterViewModel()
-    
+
     
     override func loadView() {
         registerScreen = RegisterScreen()
@@ -22,6 +22,8 @@ class RegisterVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) { // hide navigation controller 
         navigationController?.navigationBar.isHidden = true
     }
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +60,12 @@ extension RegisterVC: RegisterScreenProtocol {
 
 extension RegisterVC: RegisterViewModelProtocol {
     func successRegister() {
-        let VC = HomeVC()
-        VC.modalPresentationStyle = .fullScreen
-        self.present(VC, animated: true, completion: nil)
+      
+        Alert(controller: self).showAlertInformation(title: "Atenção", message: "Usuario cadastrado com suceso!")
+ 
+        //  self.present(navVC, animated: true, completion: nil)
+ 
+        //navigationController?.popViewController(animated: true)
     }
     
     func errorRegister(errorMessage: String) {

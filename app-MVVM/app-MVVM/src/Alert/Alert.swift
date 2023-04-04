@@ -22,4 +22,10 @@ class Alert {
         controller.present(alertController, animated: true)
     }
 
+    public func succesRegister(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let back = UIAlertAction(title: "voltar", style: .cancel)
+        alertController.addAction(back) 
+        controller.present(alertController, animated: true)
+    }
 }
