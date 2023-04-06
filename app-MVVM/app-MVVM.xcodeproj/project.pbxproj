@@ -23,6 +23,8 @@
 		38C5B9E629D6086300F05E72 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5B9E429D6086300F05E72 /* UIViewController+Extension.swift */; };
 		38C5B9E829D6093C00F05E72 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5B9E729D6093C00F05E72 /* Extension+Button.swift */; };
 		38E5341629DB45AB00543A6C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5341529DB45AB00543A6C /* RegisterViewModel.swift */; };
+		38E6A88C29DF3EAE002B1EAF /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 38E6A88B29DF3EAE002B1EAF /* HomeData.json */; };
+		38E6A88F29DF3F77002B1EAF /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E6A88E29DF3F77002B1EAF /* HomeService.swift */; };
 		38F18DC229CA1D1C00ADCB7F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC129CA1D1C00ADCB7F /* HomeScreen.swift */; };
 		38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC429CA202700ADCB7F /* UIView + Extension.swift */; };
 		38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */; };
@@ -39,11 +41,12 @@
 		38F18DED29CCBFDB00ADCB7F /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DEC29CCBFDB00ADCB7F /* PostCardViewModel.swift */; };
 		38F18DF029CCC13600ADCB7F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DEF29CCC13600ADCB7F /* PostCollectionViewCell.swift */; };
 		38F18DF429CCC1EF00ADCB7F /* PostCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F18DF329CCC1EF00ADCB7F /* PostCollectionViewCellScreen.swift */; };
-		42C5474BEA8CF109E8EA884E /* Pods_app_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881828018B8A3D90BF7A9319 /* Pods_app_MVVM.framework */; };
+		483C0761400C6BBFC8EBBD7E /* Pods_app_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F679C9240E9F200E66F5AD8E /* Pods_app_MVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		353FD1B59B9721FC095E2ACB /* Pods-app-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-app-MVVM/Pods-app-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		200398B949EE5B3C0A4BB955 /* Pods-app-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-app-MVVM/Pods-app-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		2A6BF2590D7B74147D719526 /* Pods-app-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-MVVM.release.xcconfig"; path = "Target Support Files/Pods-app-MVVM/Pods-app-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		38433D2929D203A7005C611A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3893C9E729CA162C00F08EFA /* app-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3893C9EA29CA162C00F08EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 		38C5B9E429D6086300F05E72 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38C5B9E729D6093C00F05E72 /* Extension+Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
 		38E5341529DB45AB00543A6C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		38E6A88B29DF3EAE002B1EAF /* HomeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		38E6A88E29DF3F77002B1EAF /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		38F18DC129CA1D1C00ADCB7F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		38F18DC429CA202700ADCB7F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		38F18DC929CA220100ADCB7F /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
@@ -78,8 +83,7 @@
 		38F18DEC29CCBFDB00ADCB7F /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
 		38F18DEF29CCC13600ADCB7F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		38F18DF329CCC1EF00ADCB7F /* PostCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCellScreen.swift; sourceTree = "<group>"; };
-		429B00DBEF80A3DB4A6D1A97 /* Pods-app-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-MVVM.release.xcconfig"; path = "Target Support Files/Pods-app-MVVM/Pods-app-MVVM.release.xcconfig"; sourceTree = "<group>"; };
-		881828018B8A3D90BF7A9319 /* Pods_app_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F679C9240E9F200E66F5AD8E /* Pods_app_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C5474BEA8CF109E8EA884E /* Pods_app_MVVM.framework in Frameworks */,
+				483C0761400C6BBFC8EBBD7E /* Pods_app_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +101,8 @@
 		0DF41B12E9C0A9F4B6959092 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				353FD1B59B9721FC095E2ACB /* Pods-app-MVVM.debug.xcconfig */,
-				429B00DBEF80A3DB4A6D1A97 /* Pods-app-MVVM.release.xcconfig */,
+				200398B949EE5B3C0A4BB955 /* Pods-app-MVVM.debug.xcconfig */,
+				2A6BF2590D7B74147D719526 /* Pods-app-MVVM.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,7 +113,7 @@
 				3893C9E929CA162C00F08EFA /* app-MVVM */,
 				3893C9E829CA162C00F08EFA /* Products */,
 				0DF41B12E9C0A9F4B6959092 /* Pods */,
-				DB0B98D3BA1315AAA39FE4D3 /* Frameworks */,
+				40C27CCFE16681BE644350B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +142,8 @@
 		3893C9FE29CA171B00F08EFA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				38E6A88D29DF3F62002B1EAF /* Service */,
+				38E6A88A29DF3E79002B1EAF /* Mock */,
 				38F18DD829CA625D00ADCB7F /* Model */,
 				38AF726A29D6497700402659 /* Alert */,
 				38F18DC329CA200300ADCB7F /* Utils */,
@@ -222,6 +228,22 @@
 				38E5341529DB45AB00543A6C /* RegisterViewModel.swift */,
 			);
 			path = RegisterViewModel;
+			sourceTree = "<group>";
+		};
+		38E6A88A29DF3E79002B1EAF /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				38E6A88B29DF3EAE002B1EAF /* HomeData.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		38E6A88D29DF3F62002B1EAF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				38E6A88E29DF3F77002B1EAF /* HomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		38F18DC329CA200300ADCB7F /* Utils */ = {
@@ -393,10 +415,10 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		DB0B98D3BA1315AAA39FE4D3 /* Frameworks */ = {
+		40C27CCFE16681BE644350B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				881828018B8A3D90BF7A9319 /* Pods_app_MVVM.framework */,
+				F679C9240E9F200E66F5AD8E /* Pods_app_MVVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -408,11 +430,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3893C9FB29CA162D00F08EFA /* Build configuration list for PBXNativeTarget "app-MVVM" */;
 			buildPhases = (
-				7327CE4D5A623A68549BBF0A /* [CP] Check Pods Manifest.lock */,
+				7398EE8E5208373848C0FFEA /* [CP] Check Pods Manifest.lock */,
 				3893C9E329CA162C00F08EFA /* Sources */,
 				3893C9E429CA162C00F08EFA /* Frameworks */,
 				3893C9E529CA162C00F08EFA /* Resources */,
-				E97797C67CB4D5AB0430B386 /* [CP] Embed Pods Frameworks */,
+				DCC260DC637846841F3B32A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,6 +483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E6A88C29DF3EAE002B1EAF /* HomeData.json in Resources */,
 				3893C9F729CA162D00F08EFA /* LaunchScreen.storyboard in Resources */,
 				3893C9F429CA162D00F08EFA /* Assets.xcassets in Resources */,
 				38433D2A29D203A7005C611A /* GoogleService-Info.plist in Resources */,
@@ -470,7 +493,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7327CE4D5A623A68549BBF0A /* [CP] Check Pods Manifest.lock */ = {
+		7398EE8E5208373848C0FFEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,7 +515,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E97797C67CB4D5AB0430B386 /* [CP] Embed Pods Frameworks */ = {
+		DCC260DC637846841F3B32A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -540,6 +563,7 @@
 				3893C9EB29CA162C00F08EFA /* AppDelegate.swift in Sources */,
 				38C5B9D729D26B8100F05E72 /* LoginVC.swift in Sources */,
 				38F18DCA29CA220100ADCB7F /* UIColor + Extension.swift in Sources */,
+				38E6A88F29DF3F77002B1EAF /* HomeService.swift in Sources */,
 				38F18DC529CA202700ADCB7F /* UIView + Extension.swift in Sources */,
 				3893C9ED29CA162C00F08EFA /* SceneDelegate.swift in Sources */,
 				38E5341629DB45AB00543A6C /* RegisterViewModel.swift in Sources */,
@@ -678,7 +702,7 @@
 		};
 		3893C9FC29CA162D00F08EFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 353FD1B59B9721FC095E2ACB /* Pods-app-MVVM.debug.xcconfig */;
+			baseConfigurationReference = 200398B949EE5B3C0A4BB955 /* Pods-app-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -711,7 +735,7 @@
 		};
 		3893C9FD29CA162D00F08EFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 429B00DBEF80A3DB4A6D1A97 /* Pods-app-MVVM.release.xcconfig */;
+			baseConfigurationReference = 2A6BF2590D7B74147D719526 /* Pods-app-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

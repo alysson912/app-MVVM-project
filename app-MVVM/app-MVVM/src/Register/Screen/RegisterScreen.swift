@@ -151,8 +151,8 @@ class RegisterScreen: UIView {
             
             imageAddUser.topAnchor.constraint(equalTo: self.backButton.bottomAnchor, constant: 100),
             imageAddUser.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageAddUser.widthAnchor.constraint(equalToConstant: 200),
-            imageAddUser.heightAnchor.constraint(equalToConstant: 200),
+            imageAddUser.widthAnchor.constraint(equalToConstant: 150),
+            imageAddUser.heightAnchor.constraint(equalToConstant: 150),
             
             emailTextField.topAnchor.constraint(equalTo: self.imageAddUser.bottomAnchor, constant: 50),
             emailTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
