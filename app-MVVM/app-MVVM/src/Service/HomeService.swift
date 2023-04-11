@@ -11,7 +11,7 @@ import Alamofire
 class HomeService {
     
     func getHomeDataAlamofire(completion: @escaping (HomeData?, Error?) -> Void){
-        let url: String = "https://run.mocky.io/v3/6749b118-ae2e-47b7-99bf-41b3785e58bc"
+        let url: String = "https://run.mocky.io/v3/12e94b70-b979-4a06-98b0-f5bfe07e8e32"
         AF.request(url, method: .get).validate().responseDecodable(of: HomeData.self){ response in
             
             debugPrint(response)
