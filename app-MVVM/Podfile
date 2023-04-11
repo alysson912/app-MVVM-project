@@ -10,5 +10,6 @@ target 'app-MVVM' do
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'FirebaseAnalytics'
+pod 'Alamofire'
 
 end

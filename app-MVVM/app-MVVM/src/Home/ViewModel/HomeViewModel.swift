@@ -32,7 +32,7 @@ class HomeViewModel {
         }
     }
     public func fetchAllRequest(){
-        service.getHomeDataJson { HomeData, error in
+        service.getHomeDataAlamofire { HomeData, error in
             if error == nil {
                 self.posts = HomeData?.posts ?? []
                 self.story = HomeData?.stories ?? []
