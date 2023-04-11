@@ -19,12 +19,28 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
+        
+        viewModel.delegate(delegate: self)
         viewModel.fetchAllRequest()
     }
     
     
 }
+extension HomeVC: HomeViewModelProtocol{
+    func success() {
+        print(#function)//após finalizar todos os processos do app, volta para thred principal,e execute essa alteração, alteracao forcada na UI
+        DispatchQueue.main.async {
+            self.homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
+        }
+    }
+    
+    func error() {
+        print(#function)
+    }
+    
+    
+}
+
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItemsInSection

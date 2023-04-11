@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol HomeViewModelProtocol: AnyObject {
+    func success()
+    func error()
+}
+
 class HomeViewModel {
+    
+    private weak var delegate: HomeViewModelProtocol?
+    public func delegate(delegate: HomeViewModelProtocol?){
+        self.delegate = delegate
+    }
+     
     
     private var service = HomeService()
     private var posts = [Posts]()
@@ -36,6 +47,9 @@ class HomeViewModel {
             if error == nil {
                 self.posts = HomeData?.posts ?? []
                 self.story = HomeData?.stories ?? []
+                self.delegate?.success()
+            }else{
+                self.delegate?.error()
             }
         }
     }
