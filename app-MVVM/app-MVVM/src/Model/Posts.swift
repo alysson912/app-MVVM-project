@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Posts {
-    let profileImage, userName, postImage: String
+// MARK: - Post
+struct Posts: Codable {
+    var userName, profileImage, postImage: String?
 }
